@@ -16,18 +16,15 @@ AFRAME.registerComponent('set-video', {
     var data = this.data;
     var el = this.el;
     var sceneEl = el.sceneEl;
-    //var controls = document.querySelector('#controls');
+    var controls = document.querySelector('#controls');
     var home = document.querySelector('#home-page');
 
     el.addEventListener(data.on, function () {
-        //document.getElementById('video').src = data.src;
-        //home.emit('off');
+        document.getElementById('video').src = data.src;
         home.emit('off');
-        window.location = data.src;
-        return false;
-        //setTimeout(function() {
-        //  controls.setAttribute("visible", true);
-        //}, 500);
+        setTimeout(function() {
+          controls.setAttribute("visible", true);
+        }, 500);
     });
   }
 });

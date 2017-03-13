@@ -31,8 +31,8 @@ AFRAME.registerComponent('home-page', {
     });
 
     function backToHome() {
-      var controls = document.querySelector('#controls');
-        controls.setAttribute("visible", false);
+      //var controls = document.querySelector('#controls');
+        //controls.setAttribute("visible", false);
         document.getElementById('video').src = 'videos/background.mp4';
         setTimeout(function() {
           el.emit('on');
